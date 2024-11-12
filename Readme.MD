@@ -41,11 +41,10 @@ $$
 \nabla f(x_k + \alpha p_k)^T p_k \geq c_2 \nabla f(x_k)^T p_k 
 $$
 
-where \( 0 < $c_2 <$ 1 \) is another constant (typically at a value of 0.9).
+where \(0 < $c_2 <$ 1\) is another constant (typically at a value of 0.9).
 
-### Summary
+### Further Reading
 
-The BFGS method is a powerful optimization algorithm that combines the efficiency of quasi-Newton methods with the robustness of line search techniques. By iteratively updating the inverse Hessian approximation and ensuring sufficient decrease and curvature conditions, BFGS effectively navigates the search space to find local optima.
 
 For more detailed information, refer to the following resources:
 - [BFGS Algorithm on Wikipedia](https://en.wikipedia.org/wiki/BFGS_method)
