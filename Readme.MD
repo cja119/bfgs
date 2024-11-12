@@ -1,4 +1,4 @@
-e# BFGS Algorithm
+# BFGS Algorithm
 ## Overview
 
 The Broyden–Fletcher–Goldfarb–Shanno (BFGS) algorithm is an iterative method for solving unconstrained nonlinear optimization problems. It belongs to the family of quasi-Newton methods, which are used to find local maxima and minima of functions.
