@@ -1,4 +1,4 @@
-# BFGS Algorithm
+e# BFGS Algorithm
 ## Overview
 
 The Broyden–Fletcher–Goldfarb–Shanno (BFGS) algorithm is an iterative method for solving unconstrained nonlinear optimization problems. It belongs to the family of quasi-Newton methods, which are used to find local maxima and minima of functions.
@@ -21,7 +21,11 @@ Quasi-Newton methods, like BFGS, build up an approximation to the Hessian matrix
 
 ### Line Search
 
-The BFGS algorithm typically uses a line search to find an acceptable step size \($\alpha$\) that satisfies certain conditions. The line search aims to ensure sufficient decrease in the objective function and to maintain the curvature condition. The search direction is derived from the hessian matrix:
+The BFGS algorithm typically uses a line search to find an acceptable step size \($\alpha$\) that satisfies certain conditions. The line search aims to ensure sufficient decrease in the objective function and to maintain the curvature condition. The search direction is derived from the inverse of the hessian matrix:
+
+$$
+p_k = - H_k \nabla f(x_{k})
+$$
 
 ### Armijo Condition
 
