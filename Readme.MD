@@ -7,7 +7,9 @@ The Broyden–Fletcher–Goldfarb–Shanno (BFGS) algorithm is an iterative meth
 
 The BFGS method provides an efficient way to approximation of the inverse Hessian matrix, \( H_k \), at each iteration. The update formula is:
 
-\[ H_{k+1} = \left( I - \frac{s_k y_k^T}{y_k^T s_k} \right) H_k \left( I - \frac{y_k s_k^T}{y_k^T s_k} \right) + \frac{s_k s_k^T}{y_k^T s_k} \]
+$$
+H_{k+1} = \left( I - \frac{s_k y_k^T}{y_k^T s_k} \right) H_k \left( I - \frac{y_k s_k^T}{y_k^T s_k} \right) + \frac{s_k s_k^T}{y_k^T s_k}
+$$
 
 where:
 - \( s_k = x_{k+1} - x_k \) is the difference in the position vector.
