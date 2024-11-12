@@ -37,7 +37,7 @@ $$
 f(x_k + \alpha p_k) \leq f(x_k) + c_1 \alpha \nabla f(x_k)^T p_k 
 $$
 
-where \($0 < c_1 < 1$\) is a constant (typically with a value of 0.0001), and \($p_k$\) is the search direction.
+Where \($0 < c_1 < 1$\) is a constant (typically with a value of 0.0001), and \($p_k$\) is the search direction.
 
 2. Curvature Condition
     
@@ -47,7 +47,7 @@ $$
 \nabla f(x_k + \alpha p_k)^T p_k \geq c_2 \nabla f(x_k)^T p_k 
 $$
     
-    Where \(0 < $c_2 <$ 1\) is another constant (typically at a value of 0.9).
+Where \(0 < $c_2 <$ 1\) is another constant (typically at a value of 0.9).
 
 ### Further Reading
 
