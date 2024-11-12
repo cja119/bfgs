@@ -1,7 +1,7 @@
 #  Broyden–Fletcher–Goldfarb–Shanno Optimisation
 
 The Broyden–Fletcher–Goldfarb–Shanno (BFGS) algorithm is an iterative method for solving unconstrained nonlinear optimization problems. It belongs to the family of quasi-Newton methods, which are used to find local maxima and minima of functions. This is an implementation of this method in Rust, thus leveraging the higher computational efficiency of the language, and uses pyo3 to collate this into a python module.
-
+![Sample Solve](SampleRosenbrock.png)
 ### Equations Involved
 
 The BFGS method provides an efficient way to approximation of the inverse Hessian matrix, \($H_k$\), at each iteration. The update formula is:
