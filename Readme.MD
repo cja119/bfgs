@@ -35,7 +35,7 @@ where \($0 < c_1 < 1$\) is a constant (typically with a value of 0.0001), and \(
 
 ### Curvature Condition
 
-The curvature condition ensures that the step size \(\alpha\) is not too small and that the search direction is a descent direction. It is given by:
+The curvature condition ensures that the step size \($\alpha$\) is not too small and that the search direction is a descent direction. It is given by:
 
 $$
 \nabla f(x_k + \alpha p_k)^T p_k \geq c_2 \nabla f(x_k)^T p_k 
