@@ -9,7 +9,6 @@ The BFGS method provides an efficient way to approximation of the inverse Hessia
 
 $$
 H_{k+1} = H_{k} + \frac{\left( s_{k}^{\text{T}} y_{k} + y_{k}^{\text{T}} H_{k} y_{k} \right) \left( s_{k} s_{k}^{\text{T}} \right)}{\left( s_{k}^{\text{T}} y_{k} \right)^{2}} - \frac{H_{k} y_{k} s_{k}^{\text{T}} + s_{k} y_{k}^{\text{T}} H_{k}}{s_{k}^{\text{T}} y_{k}}.
-
 $$
 
 where:
