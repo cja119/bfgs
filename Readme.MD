@@ -12,8 +12,8 @@ H_{k+1} = \left( I - \frac{s_k y_k^T}{y_k^T s_k} \right) H_k \left( I - \frac{y_
 $$
 
 where:
-- \( s_k = x_{k+1} - x_k \) is the difference in the position vector.
-- \( y_k = \nabla f(x_{k+1}) - \nabla f(x_k) \) is the difference in the gradient vector.
+- \( $s_k = x_{k+1} - x_k$ \) is the difference in the position vector.
+- \( $y_k = \nabla f(x_{k+1}) - \nabla f(x_k)$ \) is the difference in the gradient vector.
 
 ### Quasi-Newton Method
 
@@ -27,17 +27,21 @@ The BFGS algorithm typically uses a line search to find an acceptable step size 
 
 The Armijo condition ensures that the step size \( \alpha \) provides a sufficient decrease in the objective function. It is given by:
 
-\[ f(x_k + \alpha p_k) \leq f(x_k) + c_1 \alpha \nabla f(x_k)^T p_k \]
+$$
+f(x_k + \alpha p_k) \leq f(x_k) + c_1 \alpha \nabla f(x_k)^T p_k 
+$$
 
-where \( 0 < c_1 < 1 \) is a constant (typically with a value of 0.00-1), and \( p_k \) is the search direction.
+where \( $0 < c_1 < 1$ \) is a constant (typically with a value of 0.0001), and \( $p_k$ \) is the search direction.
 
 ### Curvature Condition
 
 The curvature condition ensures that the step size \( \alpha \) is not too small and that the search direction is a descent direction. It is given by:
 
-\[ \nabla f(x_k + \alpha p_k)^T p_k \geq c_2 \nabla f(x_k)^T p_k \]
+$$
+\nabla f(x_k + \alpha p_k)^T p_k \geq c_2 \nabla f(x_k)^T p_k 
+$$
 
-where \( 0 < c_2 < 1 \) is another constant (typically at a value of 0.9).
+where \( 0 < $c_2 <$ 1 \) is another constant (typically at a value of 0.9).
 
 ### Summary
 
