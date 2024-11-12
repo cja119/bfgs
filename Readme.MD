@@ -21,7 +21,7 @@ Quasi-Newton methods, like BFGS, build up an approximation to the Hessian matrix
 
 ### Line Search
 
-The BFGS algorithm typically uses a line search to find an acceptable step size \(\alpha\) that satisfies certain conditions. The line search aims to ensure sufficient decrease in the objective function and to maintain the curvature condition. The search direction is derived from the hessian matrix:
+The BFGS algorithm typically uses a line search to find an acceptable step size \($\alpha$\) that satisfies certain conditions. The line search aims to ensure sufficient decrease in the objective function and to maintain the curvature condition. The search direction is derived from the hessian matrix:
 
 ### Armijo Condition
 
