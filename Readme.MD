@@ -33,9 +33,9 @@ In order to choose a suitable step size \($\alpha$\) in the direction of our sea
 
 1. The first condition, known as the Armijo condition ensures that the step size \($\alpha$\) provides a sufficient decrease in the objective function. It is given by:
 
-    $$
-    f(x_k + \alpha p_k) \leq f(x_k) + c_1 \alpha \nabla f(x_k)^T p_k 
-    $$
+$$
+f(x_k + \alpha p_k) \leq f(x_k) + c_1 \alpha \nabla f(x_k)^T p_k 
+$$
 
 where \($0 < c_1 < 1$\) is a constant (typically with a value of 0.0001), and \($p_k$\) is the search direction.
 
@@ -43,9 +43,9 @@ where \($0 < c_1 < 1$\) is a constant (typically with a value of 0.0001), and \(
     
     The curvature condition ensures that the step size \($\alpha$\) is not too small and that the search direction is a descent direction. It is given by:
     
-    $$
-    \nabla f(x_k + \alpha p_k)^T p_k \geq c_2 \nabla f(x_k)^T p_k 
-    $$
+$$
+\nabla f(x_k + \alpha p_k)^T p_k \geq c_2 \nabla f(x_k)^T p_k 
+$$
     
     where \(0 < $c_2 <$ 1\) is another constant (typically at a value of 0.9).
 
