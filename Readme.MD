@@ -25,7 +25,7 @@ The BFGS algorithm typically uses a line search to find an acceptable step size 
 
 ### Armijo Condition
 
-The Armijo condition ensures that the step size \(\alpha\) provides a sufficient decrease in the objective function. It is given by:
+The Armijo condition ensures that the step size \($\alpha$\) provides a sufficient decrease in the objective function. It is given by:
 
 $$
 f(x_k + \alpha p_k) \leq f(x_k) + c_1 \alpha \nabla f(x_k)^T p_k 
