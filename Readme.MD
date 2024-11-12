@@ -47,7 +47,7 @@ $$
 \nabla f(x_k + \alpha p_k)^T p_k \geq c_2 \nabla f(x_k)^T p_k 
 $$
     
-    where \(0 < $c_2 <$ 1\) is another constant (typically at a value of 0.9).
+    Where \(0 < $c_2 <$ 1\) is another constant (typically at a value of 0.9).
 
 ### Further Reading
 
