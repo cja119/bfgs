@@ -13,7 +13,7 @@ $$
 
 where:
 - \($s_k = x_{k+1} - x_k$\) is the difference in the position vector.
-- \($y_k = \nabla f(x_{k+1}) - \nabla f(x_k)$\) is the difference in the gradient vector.
+- \($y_k = \nabla f(x_{k+1}) - \nabla f(x_k)$ \) is the difference in the gradient vector.
 
 ### Quasi-Newton Method
 
