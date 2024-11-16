@@ -58,6 +58,62 @@ plt.show()
 ```
 This will show the following:
 ![Sample Solve](SampleRosenbrock.png)
+## Quickstart
+
+For efficiency's sake, this implementation of BFGs is coded in rust, but is designed to be run in python through its use of pyo3/Maturin. This provides the utility and flexibility of python, with the enhanced computational efficiency begotten from rust.
+
+### Step 1: Install Rust
+
+1. Open your terminal.
+2. Run the following command to install Rust using `rustup` (the Rust toolchain installer):
+
+    ```sh
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    ```
+
+3. Follow the on-screen instructions to complete the installation.
+4. After installation, ensure that Rust is installed correctly by running:
+
+    ```sh
+    rustc --version
+    ```
+
+    This should display the version of Rust installed.
+
+### Step 2: Install Maturin
+
+1. With Rust installed, you can now install Maturin. Run the following command in your terminal:
+
+    ```sh
+    pip install maturin
+    ```
+
+2. Verify the installation by checking the version of Maturin:
+
+    ```sh
+    maturin --version
+    ```
+
+    This should display the version of Maturin installed.
+
+For more information, refer to the official documentation:
+- [Rust Documentation](https://www.rust-lang.org/learn)
+- [Maturin Documentation](https://maturin.rs/)
+
+### Step 3: Clone this repository
+```sh
+git clone https://github.com/cja119/bfgs.git
+```
+### Step 4: Build The Module
+
+```sh
+maturin develop
+```
+
+This should succesfully build the module and store it in your native python location (pay attention to which location it prints when the module is built)
+
+
+
 ## Mathematical Formulation
 ### Quasi-Newton Method
 
@@ -110,62 +166,6 @@ Where \(0 < $c_2 <$ 1\) is another constant (typically at a value of 0.9).
 For more detailed information, refer to the following resources:
 - [BFGS Algorithm on Wikipedia](https://en.wikipedia.org/wiki/BFGS_method)
 - [Numerical Optimization by Jorge Nocedal and Stephen Wright](https://www.springer.com/gp/book/9780387303031)
-
-## Implementation
-
-For efficiency's sake, this implementation of BFGs is coded in rust, but is designed to be run in python through its use of pyo3/Maturin. This provides the utility and flexibility of python, with the enhanced computational efficiency begotten from rust.
-
-## Quickstart
-
-### Step 1: Install Rust
-
-1. Open your terminal.
-2. Run the following command to install Rust using `rustup` (the Rust toolchain installer):
-
-    ```sh
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-    ```
-
-3. Follow the on-screen instructions to complete the installation.
-4. After installation, ensure that Rust is installed correctly by running:
-
-    ```sh
-    rustc --version
-    ```
-
-    This should display the version of Rust installed.
-
-### Step 2: Install Maturin
-
-1. With Rust installed, you can now install Maturin. Run the following command in your terminal:
-
-    ```sh
-    pip install maturin
-    ```
-
-2. Verify the installation by checking the version of Maturin:
-
-    ```sh
-    maturin --version
-    ```
-
-    This should display the version of Maturin installed.
-
-For more information, refer to the official documentation:
-- [Rust Documentation](https://www.rust-lang.org/learn)
-- [Maturin Documentation](https://maturin.rs/)
-
-### Step 3: Clone this repository
-```sh
-git clone https://github.com/cja119/bfgs.git
-```
-### Step 4: Build The Module
-
-```sh
-maturin develop
-```
-
-This should succesfully build the module and store it in your native python location (pay attention to which location it prints when the module is built)
 
 ## Use of Generative Ai
 
