@@ -22,7 +22,8 @@ wrapped_fn = bfgs.Wrapper(function)
 ```
 ### Step 3: Perform the optimisation and grab optimised values
 ```py
-# Performing the minimisation with a guess value of [15,15], stationarity toelrance of 0.001 and iteration limit (not f_val limit) of 500.
+# Performing the minimisation with a guess value of [15,15], stationarity toelrance of 0.001 
+# and iteration limit (not f_val limit) of 500.
 x_min = bfgs.minimize(wrapped_fn, np.array([15.0,15.0]), 1e-3, 500, verbose=False)
 
 # Extracting the accepted step values and coordinates.
