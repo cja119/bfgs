@@ -9,31 +9,41 @@ Shown below is an example of how to use this module in Python:
 import bfgs
 import numpy as np
 import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
 ```
 
-### Step 2: Define a test function for the optimsiation and use the inbuilt funciton wrapper to pass it to Rust.
+### Step 2: Define a test function for the optimsiation and use the inbuilt funciton wrapper to pass it to Rust. 
+The test function can be n-dimensional provided the correct number of dimensions are used for the initial guess in Step 3.
 ```py
+# Performing the minimisation with a 2D Rosenbrock. 
 def function(x):
     return 100.0 * (x[1] - x[0]**2)**2 + (1 - x[0])**2
 wrapped_fn = bfgs.Wrapper(function)
 ```
-### Step 3: Perform the optimisation
+### Step 3: Perform the optimisation and grab optimised values
 ```py
+# Performing the minimisation with a guess value of [15,15], stationarity toelrance of 0.001 and iteration limit (not f_val limit) of 500.
 x_min = bfgs.minimize(wrapped_fn, np.array([15.0,15.0]), 1e-3, 500, verbose=False)
+
+# Extracting the accepted step values and coordinates.
+f_values = bfgs.get_function_vals(wrapped_fn)
+x_values = bfgs.get_x_vals(wrapped_fn)
 ```
 ### Step 3: Grab optimisation values and visualise results:
 ```py
-f_values = bfgs.get_function_vals(wrapped_fn)
-x_values = bfgs.get_x_vals(wrapped_fn)
-from mpl_toolkits.mplot3d import Axes3D
+# Setting limits for the plots
 lim = 20
 plotlim=20
+
 # Create a meshgrid for the surface plot
 x = np.linspace(-plotlim, plotlim, 100)
 y = np.linspace(-plotlim, plotlim, 100)
 x, y = np.meshgrid(x, y)
+
+# Evaluating the funciton for the contourplot
 z = function([x, y, np.zeros_like(x)])
 
+# Building a contour plot of the results
 contour = plt.contour(x, y, z, 50, cmap='viridis')
 plt.colorbar(contour)
 plt.plot(x_values[:, 0], x_values[:, 1], color='r', marker='o')
@@ -42,7 +52,6 @@ plt.ylim([-lim, lim])
 plt.xlabel('X')
 plt.ylabel('Y')
 plt.title(f'Minimisation of Rosenbrock Function with 500 iterations and a tolerance of 0.001 \n Optimal value of {function(x_values[-1]):2f} Found at x = {x_values[-1]}')
-
 plt.gcf().set_size_inches(12, 4)
 plt.show()
 ```
