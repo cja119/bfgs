@@ -132,7 +132,7 @@ wrapped_fn = bfgs.Wrapper(function)
 ```py
 x_min = bfgs.minimize(wrapped_fn, np.array([15.0,15.0]), 1e-3, 500, verbose=False)
 ```
-##3 Step 3: Grab optimisation values and visualise results:
+### Step 3: Grab optimisation values and visualise results:
 ```py
 f_values = bfgs.get_function_vals(wrapped_fn)
 x_values = bfgs.get_x_vals(wrapped_fn)
